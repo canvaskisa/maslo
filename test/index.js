@@ -7,7 +7,6 @@ import {
 } from '../index.js';
 
 test('shape must return an object', t => {
-
 	const expected = {
 		id: '0',
 		name: 'Mr. Johnson'
@@ -22,7 +21,6 @@ test('shape must return an object', t => {
 });
 
 test('oneOf must return on of provided arguments', t => {
-
 	const optional = ['Test', 'Test2', 'Test3'];
 	const actual = oneOf(optional);
 
@@ -30,15 +28,12 @@ test('oneOf must return on of provided arguments', t => {
 });
 
 test('bool must return ture or false', t => {
-
 	const optional = [true, false];
 
 	t.ok(optional.indexOf(bool()) !== -1);
-
 });
 
 test('arrayOf must return array of provided type', t => {
-
 	const actual = arrayOf(shape.bind(null, {
 		id: () => 0,
 		value: () => 100
@@ -51,5 +46,4 @@ test('arrayOf must return array of provided type', t => {
 		id: 0,
 		value: 100
 	}], actual);
-
 });

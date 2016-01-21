@@ -3,16 +3,18 @@
 var __keys = Object.keys;
 var __floor = Math.floor;
 var __random = Math.random;
-var __range = (length) => Array.apply(null, Array(length));
+var __range = function (length) {
+	return Array.apply(null, Array(length));
+};
 
 function shape(o) {
 	var result = {};
 
-	__keys(o).forEach(function(k) {
-		if (typeof o[k] !== 'function') {
-			result[k] = o[k];
-		} else {
+	__keys(o).forEach(function (k) {
+		if (typeof o[k] === 'function') {
 			result[k] = o[k]();
+		} else {
+			result[k] = o[k];
 		}
 	});
 

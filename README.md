@@ -1,7 +1,7 @@
 # Maslo
 [![NPM version](http://img.shields.io/npm/v/maslo.svg)](https://www.npmjs.org/package/maslo)
 [![Travis Build Status](https://travis-ci.org/canvaskisa/maslo.svg)](https://travis-ci.org/canvaskisa/maslo)
-[![Coveralls Coverage Status](https://coveralls.io/repos/github/canvaskisa/maslo/badge.svg?branch=master)](https://coveralls.io/github/canvaskisa/maslo)
+[![Coverage Status](https://coveralls.io/repos/github/canvaskisa/maslo/badge.svg?branch=master)](https://coveralls.io/github/canvaskisa/maslo?branch=master)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 
 Simple JSON fake data creation.

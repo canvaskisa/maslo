@@ -1,0 +1,31 @@
+{
+  "name": "maslo",
+  "version": "0.0.0",
+  "description": "Maslo",
+  "main": "index.js",
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "keywords": [
+    "faker",
+    "faker.js",
+    "ffaker",
+    "chance",
+    "chance.js",
+    "json",
+    "fake",
+    "api",
+    "test",
+    "maslo"
+  ],
+  "author": "canvaskisa <canvaskisa@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/canvaskisa/maslo.git"
+  },
+  "devDependencies": {
+    "ava": "^0.10.0",
+    "xo": "^0.12.1"
+  }
+}

@@ -42,19 +42,23 @@ var bool = function () {
 	return oneOf([true, false]);
 };
 
-var arrayOf = function (type, minOrLength, max) {
+var arrayOf = function (type, min, max) {
+	min = min || 5;
+
 	return function () {
 		if (max) {
 			var randomMax = oneOf(__range(max + 1))();
-			return __range(randomMax < minOrLength ? minOrLength : randomMax).map(type);
+			return __range(randomMax < min ? min : randomMax).map(type);
 		}
 
-		return __range(minOrLength).map(type);
+		return __range(min).map(type);
 	};
 };
 
 var optional = function (fn) {
-	return bool()() ? fn() : __OPTIONAL__;
+	return bool()() ? fn : function () {
+		return __OPTIONAL__;
+	};
 };
 
 module.exports = {
@@ -62,5 +66,6 @@ module.exports = {
 	arrayOf: arrayOf,
 	bool: bool,
 	oneOf: oneOf,
-	optional: optional
+	optional: optional,
+	__OPTIONAL__: __OPTIONAL__
 };

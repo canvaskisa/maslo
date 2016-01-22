@@ -15,13 +15,7 @@ var shape = function (o) {
 		var result = {};
 
 		__keys(o).forEach(function (k) {
-			var v;
-
-			if (typeof o[k] === 'function') {
-				v = o[k]();
-			} else {
-				v = o[k];
-			}
+			var v = typeof o[k] === 'function' ? o[k]() : o[k];
 
 			if (v !== __OPTIONAL__) {
 				result[k] = v;
@@ -56,16 +50,16 @@ var arrayOf = function (type, min, max) {
 };
 
 var optional = function (fn) {
-	return bool()() ? fn : function () {
-		return __OPTIONAL__;
+	return function () {
+		return bool()() ? fn() : __OPTIONAL__;
 	};
 };
 
 module.exports = {
 	shape: shape,
-	arrayOf: arrayOf,
-	bool: bool,
 	oneOf: oneOf,
+	bool: bool,
+	arrayOf: arrayOf,
 	optional: optional,
 	__OPTIONAL__: __OPTIONAL__
 };

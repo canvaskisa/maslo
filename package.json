@@ -1,7 +1,7 @@
 {
   "name": "maslo",
-  "version": "0.0.1",
-  "description": "Maslo",
+  "version": "0.0.2",
+  "description": "Struct fake json data smoothly",
   "main": "index.js",
   "scripts": {
     "test": "xo && ava",
